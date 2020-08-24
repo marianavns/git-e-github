@@ -1,4 +1,4 @@
-#Exercicio-1
+#Exercicios #Semana1 #MarianaVNS #PrimeiroTexto
 
 HTML e CSS
 
