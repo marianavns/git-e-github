@@ -138,7 +138,9 @@ git rebase <branchsecundaria>
 ```
 
 ### Resolvendo conflitos <h3>
-![Conflito](https://i.ibb.co/LvcLx1g/conflito.jpg) 
+![Conflito](https://i.ibb.co/6NyQBMh/conflito.jpg) 
+
+
 Se duas pessoas alteram a mesma parte do código e dão o push, acontecerá um conflito na hora de mergear. É necessário ir no editor de código e deletar a duplicidade que está acontecendo. O VSCode vai colorir o que está duplicado. É só escolher e apagar.
 
 https://git-school.github.io/visualizing-git/: ajuda a visualizar as branchs.
