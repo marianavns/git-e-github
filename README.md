@@ -1,6 +1,6 @@
-# Git e GitHub <h1>
+#### Git e GitHub <h1>
 
-# Introdução ao GIT e GITHUB <h2>
+### Introdução ao GIT e GITHUB <h2>
 
 ## O que é o GIT? <h3>
 
@@ -17,7 +17,7 @@ _Também pode ser usado nos seus trabalhos sozinha, tá?_
 
 Pois é, Git e Github não são a mesma coisa! Git é o software que controla as versões do código que você está alterando. Já o **Github é um site onde publicamos todo esse controle de versões, e ainda adicionando comentários para cada mudança!**
 
-# Como Funcionam Git e Github juntos? <h3>
+## Como Funcionam Git e Github juntos? <h3>
 _(abaixo temos apenas um resumão, essa parceria é um pouco mais que isso)_
 
 1. A usuária habilita para o Git alguma pasta com seus arquivos de código.
@@ -25,7 +25,7 @@ _(abaixo temos apenas um resumão, essa parceria é um pouco mais que isso)_
 3. Em seguida, a usuária "roda" essa pasta no GIT, dando um clique inverso na pasta.
 4. Digita alguns comandos e, com eles, envia esse código alterado e atualizado para o Github.
 
-# Como dizer para o GIT ignorar determinado arquivo? <h2>
+### Como dizer para o GIT ignorar determinado arquivo? <h2>
 
 Pode acontecer de você criar uma pasta e desejar ocultar alguns arquivos dela. Como, por exemplo, ocultar o arquivo de respostas na pasta de exercícios que você está mandando para uma turma. É possível fazer isso com o seguinte passo a passo:
 
@@ -33,9 +33,9 @@ Pode acontecer de você criar uma pasta e desejar ocultar alguns arquivos dela. 
 - Abre o arquivo e digita dentro dele os arquivos que você quer esconder (ou da pasta, sempre com uma barra. exemplo? */respostas*)
 - *git <seu file gitignore>*, para que o GIT o reconheça, né? :D
 
-# Comandos Importantes no Terminal (Comandos GIT ou não) <h2>
+### Comandos Importantes no Terminal (Comandos GIT ou não) <h2>
 
-# Comandos de Orientação <h3>
+## Comandos de Orientação <h3>
 
 Cada comando mostra o seguinte:
 ```js
@@ -48,7 +48,7 @@ git log --oneline // todos os commits em apenas uma linha.
 git log -p // mostra NO CONSOLE todas as alterações já feitas no VSCode.
 ```
 
-# Comandos de Criação e Apagamento <h3>
+## Comandos de Criação e Apagamento <h3>
 
 ```js
 rm <file> // Apaga o arquivo do seu computador.
