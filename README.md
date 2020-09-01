@@ -86,7 +86,8 @@ git config --list // informações do repositório, incluindo autor e endereço.
 
 ```js
 git log // todos os commits.
-git log --pretty="format %h %s" // apenas a hash e o título. Esse %h ou %s podem ser alterados para qualquer coisa que você quiser. 
+git log --pretty="format %h %s" // apenas a hash e o título. 
+//Esse %h ou %s podem ser alterados para qualquer coisa que você quiser. 
 //No site https://devhints.io/git-log-format tem vários formatos.
 git log --oneline // todos os commits em apenas uma linha.
 git log --graph // é legal, mostra uma barrinha lateral gráfica com os commits da sua branch atual.
@@ -106,11 +107,16 @@ git remote rename nomeantigo nomenovo //muda o nome da origem. Sai "origin" e en
 ### Comandos para desfazer coisas <h3>
 
 ```js
-/* Modifiquei o arquivo, mas não fiz nem o "git add". */ é mais fácil dar ctrl z no VSCode.git checkout -- <nomedoarquivo>
-/* Modifiquei o arquivo, dei git add, mas desisti de commitar */ git reset HEAD <nomedoarquivo> 
-/* Reverter o commit */ git revert <hashDoCommitQueQuerApagar> 
+/* Modifiquei o arquivo, mas não fiz nem o "git add". É mais fácil dar ctrl z no VSCode.*/ 
+git checkout -- <nomedoarquivo>
 
-/* Quero voltar para um commit e começar tudo novo de lá */
+/* Modifiquei o arquivo, dei git add, mas desisti de commitar */ 
+git reset HEAD <nomedoarquivo>
+
+/* Reverter o commit */ 
+git revert <hashDoCommitQueQuerApagar> 
+
+/* //// Quero voltar para um commit e começar tudo novo de lá */
 git checkout -b <novo-branch> // É preciso criar um novo caminho para trilhar.
 git checkout <hashDoCommitParaOndeVoltar>
 ```
@@ -132,6 +138,7 @@ git rebase <branchsecundaria>
 ```
 
 ### Resolvendo conflitos <h3>
+![Conflito](https://ibb.co/PtP7cgW) 
 Se duas pessoas alteram a mesma parte do código e dão o push, acontecerá um conflito na hora de mergear. É necessário ir no editor de código e deletar a duplicidade que está acontecendo. O VSCode vai colorir o que está duplicado. É só escolher e apagar.
 
 https://git-school.github.io/visualizing-git/: ajuda a visualizar as branchs.
