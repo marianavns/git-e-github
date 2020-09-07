@@ -1,9 +1,5 @@
 # Git e GitHub <h1>
 
-Anotações rápidas
-```js
-:x // sai do VIM, aquele editor enorme que tem o (END)
-```
 
 ## (Em Edição) Introdução ao GIT e GITHUB <h2>
 
