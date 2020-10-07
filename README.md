@@ -1,84 +1,108 @@
-# Git e GitHub <h1>
+# Git e GitHub
+
+# Sumário
+○ [O que é o GIT](#O-que-é-o-GIT)
+
+○ [O que é o GITHUB](#O-que-é-o-GITHUB)
+
+○ [Como Git e Github funcionam juntos](#Como-Git-e-Github-funcionam-juntos)
+
+○ [Criando um novo repositório](#Criando-um-novo-repositório)
+
+○ [Como sinalizar arquivos que não devem ir para o Github](#Como-sinalizar-arquivos-que-não-devem-ir-para-o-Github)
+
+○ [Comandos importantes no GitBash](#Comandos-importantes-no-Gitbash)</br>
+° [Comandos de Criação e Apagamento](#Comandos-de-Criação-e-Apagamento)</br>
+° [Comandos de Orientação](#Comandos-de-Orientação)</br>
+[Git Log](#Git-Log)
+° [Comandos para Renomear](#Comandos-para-Renomear)
+° [Comandos para desfazer coisas]
+° [Comandos para consolidar as alterações na Master]
+[Merge e Rebase](#Merge-e-rebase)
+
+[Resolvendo conflitos](#Resolvendo-conflitos)
+
+[Glossário](#Glossário)
 
 
-## (Em Edição) Introdução ao GIT e GITHUB <h2>
+# O que é o GIT
 
-### O que é o GIT? <h3>
+Sabe quando você precisava fazer trabalho em grupo e cada pessoa fazia uma parte? Então... **O GIT é um programa que administra trabalhos em grupo ou sozinha, com várias edições acontecendo até ao mesmo tempo, mas com controle de cada mudança que foi feita.** Dá para mexer no código inteiro lá no seu editor (VSCode, Sublime Text, etc) sem perder as edições anteriores! É o chamado **"Controle de Versões"**.
 
-Sabe quando você precisava fazer trabalho em grupo e cada pessoa fazia uma parte? Então... **O GIT é um programa que ajuda a fazer trabalhos em grupo, com todo mundo editando ao mesmo tempo, mas com controle do que cada um já fez.**
+Nos exemplos, o editor de código será o VSCode.
 
-Dá para mexer no código inteiro lá no seu editor (VSCode, Sublime Text, etc) sem perder as edições anteriores! É o chamado **"Controle de Versões"**.
+O Git possui um terminal, assim como o prompt de comando do Windows: o **Git Bash**.
 
-_Também pode ser usado nos seus trabalhos sozinha, tá?_
+# O que é o GITHUB
 
-### O que é o GITHUB? <h3>
+Pois é, Git e Github não são a mesma coisa! Git é o software que controla as versões do código que você está alterando. Já o **Github é um site onde publicamos todo esse controle de versões, visualizamos comentários para cada mudança e ainda dá para fazer muito mais por lá!**
 
-Pois é, Git e Github não são a mesma coisa! Git é o software que controla as versões do código que você está alterando. Já o **Github é um site onde publicamos todo esse controle de versões, e ainda visualizamos comentários para cada mudança! E dá para fazer muito mais por lá...**
+# Como Git e Github funcionam juntos
+Aqui é só o começo. A parceria Git e Github é muito mais que isso!
 
-### Como Funcionam Git e Github juntos? <h3>
-_(abaixo temos apenas um resumão, essa parceria é um pouco mais que isso)_
+1. A usuária habilita alguma pasta com seus códigos para o Git.
+2. Altera, apaga, escreve, muda tudo e salva no seu editor normalmente.
+3. Em seguida, a usuária digita alguns comandos e, com eles, envia o código alterado e atualizado para o Github.
+4. Pronto! Agora o código está disponível no Github.
 
-1. A usuária habilita para o Git alguma pasta com seus arquivos de código.
-2. Altera, apaga, escreve, muda tudo e, ao final, salva no seu editor normalmente.
-3. Em seguida, a usuária "roda" essa pasta no GIT, dando um clique inverso na pasta.
-4. Digita alguns comandos e, com eles, envia esse código alterado e atualizado para o Github.
+# Criando um novo repositório
 
-## (Em edição) Criando um novo repositório <h2>
+# Como sinalizar arquivos que não devem ir para o Github
 
-EDITAR: Passo a passo do GIT: se quiser colocar seus dados apenas numa pasta local, use isso na configuraçao inicial:
-```js
-local user.name // põe a propriedade do seu user.name apenas naquela pasta.
-```
+Às vezes alguns arquivos não precisam necessariamente ir para o Github. Suponha que dentro do repositório haja uma pasta de imagens que já estão sendo exibidas no README. Essa pasta de imagens não precisa estar no Github também, né?
+
+Para manter esta pasta no seu computador, mas não correr o risco dela ser enviada para o site, estes são os passos:
+
+- Crie um arquivo chamado `.gitignore` na sua pasta no computador;
+- Abra o arquivo `.gitignore` no VSCode;
+- Digite os arquivos devem ser ignorados (ou a pasta, sempre com uma barra. exemplo: */Imagens*);
+- Salve;
+- Digite no GitBash `git add .gitignore` (para que o GIT o reconheça, né? :D).
+
+# Comandos Importantes no GitBash
+> Comandos GIT ou não
+
+## Comandos de Criação e Apagamento
+
+Comandos Gerais | Resultado
+---- | ----
+`rm file` | Apaga o arquivo do seu computador.
+
+Comandos GIT | Resultado
+---- | ----
+`git init` | Inicia o GIT naquela pasta
+`git rm --cached <file>` | Tira o arquivo do monitoramento GIT.
+`git init --bare` | Sinaliza que a pasta é apenas um repositório matriz. *Como se fosse seu link no GitHub.*
+`git branch <titulodabranchnova>` | Cria uma branch nova.
+`git checkout -b <titulodabranchnova>` | Cria uma branch nova e já entra nela.
+
+ STASH ¹ 📝 | TRABALHANDO COM RASCUNHOS! 📝
+---- | ----
+`git stash` | Cria um rascunho no limbo para guardar algo que não deve ser commitado ainda.** 
+`git stash apply <numeroStash>` | O rascunho volta para sua head
+`git stash drop <numeroStash>` | Remove o rascunho
+`git stash pop <numeroStash>` | Faz as duas coisas ao mesmo tempo
+
+¹ Para salvar aquele código que não funciona e você precisa, por exemplo, deixá-lo de lado para fazer uma nova tarefa.
+
+## Comandos de Orientação
+
+Localiza a usuária no trabalho, nas pastas, mostra o que já foi feito ou o que está pendente.
+
+Comandos Gerais | Resultado
+---- | ----
+`pwd` | todo o caminho da pasta em que você está.
+`ls` | todos os arquivos daquela pasta.
+
+Comandos GIT | Resultado
+---- | ----
+`git config --list` | informações do repositório, incluindo autor e endereço.
+`git tag` | Mostra todas as tags.
 
 
-## Como dizer para o GIT ignorar determinado arquivo no repositório? <h2>
+### Git Log
 
-Pode acontecer de você criar uma pasta e desejar ocultar alguns arquivos dela. Como, por exemplo, ocultar o arquivo de respostas na pasta de exercícios que você está mandando para uma turma. É possível fazer isso com o seguinte passo a passo:
-
-- Crie um arquivo chamado ".gitignore"
-- Abra o arquivo e digite dentro dele os arquivos que você quer esconder (ou a pasta, sempre com uma barra. exemplo: */respostas*)
-- *git add <seu file gitignore>*, para que o GIT o reconheça, né? :D
-
-## Glossário <h2>
-- Working Tree: Árvore de Trabalho. É onde os arquivos estão sendo armazenados e editados.
-- Index: O lugar entre sua *working tree* e seu repositório GIT.
-- HEAD: É UM **ESTADO**, o seu local de trabalho.
-
-## Comandos Importantes no Terminal (Comandos GIT ou não) <h2>
-
-### Comandos de Criação e Apagamento <h3>
-
-```js
-rm <file> // Apaga o arquivo do seu computador.
-
-git rm --cached <file> // Tira o arquivo do monitoramento GIT.
-git init // Faz com que o GIT passe a enxergar aquela pasta.
-git init --bare // Sinaliza que a pasta é apenas um servidor, um repositório matriz. É como se fosse seu link no GitHub.
-
-git branch <titulodabranchnova> // Cria uma branch nova.
-git checkout -b <titulodabranchnova> // Cria uma branch nova e já entra nela.
-
-git tag // Olha todos os "marcos" do seu código, onde você adicionou uma tag.
-
-git stash // Cria uma área no limbo onde você salva algo que não deve ser commitado. 
-//Serve para salvar aquele código que não funciona e você precisa fazer uma nova tarefa, por exemplo.
-git stash list
-git stash apply <numeroStash> // As coisas voltam para sua head
-git stash drop <numeroStash> // Remove o rascunho
-git stash pop <numeroStash> // Faz as duas coisas ao mesmo tempo
-```
-
-### Comandos de Orientação (onde você está? o que está acontecendo?) <h3>
-
-Cada comando mostra o seguinte:
-```js
-pwd // todo o caminho da pasta em que você está.
-ls // todos os arquivos daquela pasta.
-
-git config --list // informações do repositório, incluindo autor e endereço.
-```
-
-#### Git Log (comandos para detalhar commits) <h4>
+O `git log` é muito útil pois detalha todas as alterações que foram feitas através dos commits.
 
 ```js
 git log // todos os commits.
@@ -94,13 +118,13 @@ git diff // A diferença entre o estado atual e o último commit.
 git diff <commitAnterior> .. <commitAtual> // Mostra no terminal todas as alterações entre dois commits.
 ```
 
-### Comandos para Renomear <h3>
+## Comandos para Renomear
 
 ```js
 git remote rename nomeantigo nomenovo //muda o nome da origem. Sai "origin" e entra o nome que você quiser.
 ```
 
-### Comandos para desfazer coisas <h3>
+## Comandos para desfazer coisas
 
 ```js
 /* Modifiquei o arquivo, mas não fiz nem o "git add". É mais fácil dar ctrl z no VSCode.*/ 
@@ -117,9 +141,9 @@ git checkout -b <novo-branch> // É preciso criar um novo caminho para trilhar.
 git checkout <hashDoCommitParaOndeVoltar>
 ```
 
-## Consolidando as alterações na Master <h2>
+## Comandos para consolidar as alterações na Master
 
-### Merge e Rebase <h3>
+### Merge e Rebase
 
 Master é onde colocamos o código que funciona, a versão "final".
 
@@ -133,7 +157,7 @@ git merge <branchsecundaria>
 git rebase <branchsecundaria>
 ```
 
-### Resolvendo conflitos <h3>
+# Resolvendo conflitos
 ![Conflito](https://i.ibb.co/6NyQBMh/conflito.jpg) 
 
 
@@ -143,13 +167,20 @@ https://git-school.github.io/visualizing-git/: ajuda a visualizar as branchs.
 
 https://devhints.io/git-log: "dev dicas" - dicas do git log.
 
-## Como criar um marco no código, aquele ponto intermediário como nos estágios do Mário, uma *Release*! <h2>
+# Como criar um marco no código
+> , aquele ponto intermediário como nos estágios do Mário, uma *Release*!
 ```js
 git tag -a <nomeParaSuaVersao> -m "Lançando a primeira versão (BETA)"
 git push origin <nomeParaSuaVersao> // Enviando sua tag nova para o GitHub
 ```
 
 Aí, no seu GitHub, sua tag vai ficar separadinha (uma release) e você pode baixar o código a partir daquele ponto!
+
+# Glossário 
+
+- HEAD: É UM **ESTADO**, o seu local de trabalho.
+- Index: O lugar entre sua *working tree* e seu repositório GIT.
+- Working Tree: Árvore de Trabalho. É onde os arquivos estão sendo armazenados e editados.
 
 
 
