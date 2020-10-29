@@ -13,7 +13,7 @@
 
 4.2 [Escondendo arquivos que não precisam ser acompanhados pelo Git](#Escondendo-arquivos-que-não-precisam-ser-acompanhados-pelo-Git)
 
-5. [Comandos Importantes no Terminal](#Comandos-Importantes-no-Terminal)
+5. [Principais Comandos no Terminal](#Principais-Comandos-no-Terminal)
 
 5.1 [Para Você Trabalhar Melhor](#Para-Você-Trabalhar-Melhor)
 
@@ -21,19 +21,17 @@
 
 5.3 [Para Orientação e Navegação](#Para-Orientação-e-Navegação)
 
-5.4 [Apenas para o Git](#Apenas-para-o-Git)
+5.4 [Principais Comandos Apenas para o Git](#Principais-Comandos-Apenas-para-o-Git)
 
-5.4.1 [Para criar ou apagar coisas no GIT](#Para-criar-ou-apagar-coisas-no-GIT)
+5.4.1 [Para criar apagar ou desfazer coisas no GIT](#Para-criar-apagar-ou-desfazer-coisas-no-GIT)
 
-5.4.2 [Para Usar Rascunhos Git Stash](#Para-Usar-Rascunhos-Git-Stash)
+5.4.2 [Para renomear no Git](#Para-renomear-no-Git)
 
-5.4.3 [Para Orientação e Navegação no GIT](#Para-Orientação-e-Navegação-no-GIT)
+5.4.3 [Para Usar Rascunhos Git Stash](#Para-Usar-Rascunhos-Git-Stash)
 
-5.4.4 [Para renomear no Git](#Para-renomear-no-Git)
+5.4.4 [Para Orientação e Navegação no GIT](#Para-Orientação-e-Navegação-no-GIT)
 
-5.4.5 [Para desfazer coisas no Git](#Para-desfazer-coisas-no-Git)
-
-5.4.6 [Para Consolidar as Alterações na Branch Master](#Para-Consolidar-as-Alterações-na-Branch-Master)
+5.4.5 [Para Consolidar as Alterações na Branch Master](#Para-Consolidar-as-Alterações-na-Branch-Master)
 
 6. [Resolvendo Conflitos](#Resolvendo-Conflitos)
 
@@ -41,9 +39,9 @@
 
 8. [Glossário e Links Interessantes](#Glossário-e-Links-Interessantes)
 
-<img src=https://i.imgur.com/DbYGB7m.gif alt="Ilustração. Mesa com dois notebooks e blocos de nota. Duas cadeiras nesta mesa estão ocupadas por um homem e uma mulher fazendo high five. Uma mulher de pé põe a mão no ombro do homem sentado. Um homem de pé põe a mão no ombro da mulher sentada. São um time de trabalho." width="330" height="330">  
+<img src=https://i.imgur.com/DbYGB7m.gif alt="Ilustração. Mesa com dois notebooks e blocos de nota. Duas cadeiras nesta mesa estão ocupadas por um homem e uma mulher fazendo high five. Uma mulher de pé põe a mão no ombro do homem sentado. Um homem de pé põe a mão no ombro da mulher sentada. São um time de trabalho." width="350" height="350">  
 
-# O que é o GIT 1
+# O que é o GIT
 
 Sabe quando você precisava fazer trabalho em grupo e cada pessoa fazia uma parte? Então... **O GIT é um programa que administra trabalhos em grupo ou sozinha, com várias edições acontecendo até ao mesmo tempo, mas com controle de cada mudança que foi feita.** Dá para mexer no código inteiro lá no seu editor (VSCode, Sublime Text, etc) sem perder as edições anteriores! É o chamado **"Controle de Versões"**.
 
@@ -51,11 +49,13 @@ Nos exemplos, o editor de código será o VSCode.
 
 O Git possui um terminal, assim como o prompt de comando do Windows: o **Git Bash**.
 
-# O que é o GITHUB 2
+<img src=https://i.imgur.com/gWu39F2.png alt="Ilustração. Pessoa programadora sentada no chão usando seu Notebook. Ao lado da cabeça dela, um fluxograma com círculos, representando o versionamento de código." width="350" height="350">  
+
+# O que é o GITHUB
 
 Pois é, Git e Github não são a mesma coisa! Git é o software que controla as versões do código que você está alterando. Já o **Github é um site onde publicamos todo esse controle de versões, visualizamos comentários para cada mudança e ainda dá para fazer muito mais por lá!**
 
-# Como Git e Github funcionam juntos 3
+# Como Git e Github funcionam juntos
 Aqui é só o começo. A parceria Git e Github é muito mais que isso!
 
 1. A usuária habilita alguma pasta com seus códigos para o Git.
@@ -63,11 +63,11 @@ Aqui é só o começo. A parceria Git e Github é muito mais que isso!
 3. Em seguida, a usuária digita alguns comandos e, com eles, envia o código alterado e atualizado para o Github.
 4. Pronto! Agora o código está disponível no Github.
 
-# Mão na Massa 4
+# Mão na Massa
 
-## Criando a primeira pasta e o primeiro arquivo 4.1
+## Criando a primeira pasta e o primeiro arquivo
 
-## Escondendo arquivos que não precisam ser acompanhados pelo Git 4.2
+## Escondendo arquivos que não precisam ser acompanhados pelo Git
 
 Às vezes alguns arquivos não precisam necessariamente ser processados pelo Git e ir para o Github. Suponha que, dentro do repositório, haja uma pasta de imagens que já estão sendo exibidas no README. Essa pasta de imagens não precisa estar no Github também, né?
 
@@ -79,23 +79,23 @@ Para manter esta pasta no seu computador, mas não correr o risco dela ser envia
 - Salve;
 - Digite no GitBash `git add .gitignore` (para que o GIT o reconheça, né? :D).
 
-# Comandos Importantes no Terminal 5
+# Principais Comandos no Terminal
 
-## Para Você Trabalhar Melhor 5.1
+## Para Você Trabalhar Melhor
 🐧 `clear` -> Limpa a tela do terminal.
 
 🌐 `cls` -> *Clear screen*, limpa a tela do terminal.
 
 🐧 🌐 `↑` -> Volta os últimos comandos digitados na linha de código.
 
-## Para Criar ou Apagar Coisas 5.2
+## Para Criar ou Apagar Coisas
 
-### Criando 5.2.1
+### Criando
 🐧 🌐 `mkdir` -> Um diretório.
 
 🐧 🌐 `echo > <novoarquivo>` -> Um arquivo.
 
-### Deletando 5.2.2
+### Deletando
 
 🐧`rm -rf <nomedoarquivo_ou_pasta>` -> Qualquer coisa (*r* de *recursivo*: vai deletar tudo de uma pasta e *f* de *force*, não pedirá verificação de nada, apenas apaga na marra).
 
@@ -103,7 +103,7 @@ Para manter esta pasta no seu computador, mas não correr o risco dela ser envia
 
 🌐`rmdir <nomedapasta>` -> Uma pasta e tudo o que tem dentro dela.
 
-## Para Orientação e Navegação 5.3
+## Para Orientação e Navegação
 
 🐧 🌐 `cd <caminho de uma pasta>` -> *Change Direction*, vai para uma pasta específica.
 🐧 🌐 `cd..` -> Vai para um nível acima do diretório.
@@ -114,12 +114,12 @@ Para manter esta pasta no seu computador, mas não correr o risco dela ser envia
 🌐`dir`-> Lista os diretórios na sua pasta para Windows.
 🌐`echo %cd%` -> Mostra todo o caminho da pasta em que você está.
 
-## Apenas para o Git 5.4
+## Principais Comandos Apenas para o Git
 :octocat:
 
-### Para criar ou apagar coisas no GIT 5.4.1
+### Para criar apagar ou desfazer coisas no GIT
 
-#### Criando 5.4.1.1
+#### Criando
 `git init` -> o GIT na pasta.
 
 `git branch <titulodabranchnova>` -> Uma branch nova.
@@ -130,10 +130,33 @@ Para manter esta pasta no seu computador, mas não correr o risco dela ser envia
 
 `git init --bare` -> Inicia o GIT Remote naquela pasta. *É como se esta pasta agora fosse seu repositório no GitHub.*
 
-#### Apagando 5.4.1.2
+#### Apagando
+
 `git rm --cached <file>` -> Retira o arquivo do monitoramento GIT.
 
-### Para Usar Rascunhos Git Stash 5.4.2
+#### Desfazendo
+
+`git restore <arquivo>` -> Reverte as mudanças feitas desde o último commit.
+
+`git restore --staged <arquivo>` -> Para tirar o arquivo do staged, do git add. Reverte o git add.
+
+`git reset HEAD <arquivo>` -> Modifiquei o arquivo, dei git add, mas desisti de commitar.
+
+`git revert <hashDoCommitQueQuerApagar>` -> Reverte o git commit. 
+
+```js
+git checkout -b <novo-branch> // É preciso criar um novo caminho para trilhar.
+git checkout <hashDoCommitParaOndeVoltar>
+```
+-> Quero voltar para um commit e começar tudo novo de lá.
+
+### Para renomear no Git
+
+`git branch -m <nomeantigo> <nomenovo>` -> Renomeia a branch.
+
+`git remote rename <nomeantigo> <nomenovo>` -> Renomeia a origem. Sai "origin" e entra o nome que você quiser.
+
+### Para Usar Rascunhos Git Stash
 
 É possível criar um rascunho no seu GIT caso você precise parar o que está fazendo e trocar de branch, mas não pode ainda commitar. É só criar um stash, que terá um número. Para ativar ou desativar este rascunho, digite:
 
@@ -141,7 +164,7 @@ Para manter esta pasta no seu computador, mas não correr o risco dela ser envia
 
 `git stash pop <numeroStash>` -> Joga o rascunho para sua head e deleta.
 
-### Para Orientação e Navegação no GIT 5.4.3
+### Para Orientação e Navegação no GIT
 
 `git status` -> O mais importante: Avisa quais documentos estão untracked, unmodified, modified e staging.
 
@@ -149,13 +172,13 @@ Para manter esta pasta no seu computador, mas não correr o risco dela ser envia
 
 `git config --list` | informações do repositório, incluindo autor e endereço.
 
-#### Detalhando Alterações com Git Diff 5.4.3.1
+#### Detalhando Alterações com Git Diff
 
 git diff // A diferença entre o estado atual e o último commit.
 
 git diff <commitAnterior> .. <commitAtual> // Mostra no terminal todas as alterações entre dois commits.
 
-#### Detalhando Commits com Git Log 5.4.3.2
+#### Detalhando Commits com Git Log
 É muito útil pois detalha todas as alterações que foram feitas através dos commits. Cada comando exibe o seguinte:
 
 `git log` -> Todos os commits.
@@ -172,27 +195,10 @@ git diff <commitAnterior> .. <commitAtual> // Mostra no terminal todas as altera
 
 `git log --help` -> abre a página web de ajuda do gitlog.
 
-### Para renomear no Git 5.4.4
 
-`git branch -m <nomeantigo> <nomenovo>` -> Renomeia a branch.
+### Para Consolidar as Alterações na Branch Master
 
-`git remote rename <nomeantigo> <nomenovo>` -> Renomeia a origem. Sai "origin" e entra o nome que você quiser.
-
-### Para desfazer coisas no Git 5.4.5
-
-`git reset HEAD <nomedoarquivo>` -> Modifiquei o arquivo, dei git add, mas desisti de commitar.
-
-`git revert <hashDoCommitQueQuerApagar>` -> Desfazer commit. 
-
-```js
-git checkout -b <novo-branch> // É preciso criar um novo caminho para trilhar.
-git checkout <hashDoCommitParaOndeVoltar>
-```
--> Quero voltar para um commit e começar tudo novo de lá.
-
-### Para Consolidar as Alterações na Branch Master 5.4.6
-
-#### Merge e Rebase 5.4.6.1
+#### Merge e Rebase
 
 Master é onde colocamos o código que funciona, a versão "final".
 
@@ -204,11 +210,11 @@ Master é onde colocamos o código que funciona, a versão "final".
 
 `git rebase <branchsecundaria>` -> Junta a branch secundária na master mantendo os commits.
 
-# Resolvendo conflitos 6
+# Resolvendo conflitos
 
 Se duas pessoas alteram a mesma parte do código e dão o push, acontecerá um conflito na hora de mergear. É necessário ir no editor de código e deletar a duplicidade que está acontecendo. O VSCode vai colorir o que está duplicado. É só escolher e apagar.
 
-# Criando um Marco no Código 7
+# Criando um Marco no Código
 
 O marco será como um ponto intermediário no seu projeto, o final de uma versão, uma *Release*!
 
@@ -217,7 +223,7 @@ O marco será como um ponto intermediário no seu projeto, o final de uma versã
 
 Aí, no seu GitHub, sua tag vai ficar separadinha (uma release) e você pode baixar o código a partir daquele ponto!
 
-# Glossário e Links Interessantes 8
+# Glossário e Links Interessantes
 
 - HEAD: É UM **ESTADO**, o seu local de trabalho.
 - Index: O lugar entre sua *working tree* e seu repositório GIT.
