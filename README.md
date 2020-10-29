@@ -39,7 +39,7 @@
 
 8. [Glossário e Links Interessantes](#Glossário-e-Links-Interessantes)
 
-<img src=https://i.imgur.com/DbYGB7m.gif alt="Ilustração. Mesa com dois notebooks e blocos de nota. Duas cadeiras nesta mesa estão ocupadas por um homem e uma mulher fazendo high five. Uma mulher de pé põe a mão no ombro do homem sentado. Um homem de pé põe a mão no ombro da mulher sentada. São um time de trabalho." width="350" height="350">  
+<img src=https://i.imgur.com/DbYGB7m.gif alt="Ilustração. Mesa com dois notebooks e blocos de nota. Duas cadeiras nesta mesa estão ocupadas por um homem e uma mulher fazendo high five. Uma mulher de pé põe a mão no ombro do homem sentado. Um homem de pé põe a mão no ombro da mulher sentada. São um time de trabalho." width="370" height="370">  
 
 # O que é o GIT
 
@@ -106,12 +106,15 @@ Para manter esta pasta no seu computador, mas não correr o risco dela ser envia
 ## Para Orientação e Navegação
 
 🐧 🌐 `cd <caminho de uma pasta>` -> *Change Direction*, vai para uma pasta específica.
+
 🐧 🌐 `cd..` -> Vai para um nível acima do diretório.
 
 🐧 `ls`-> Lista os diretórios na sua pasta.
+
 🐧 `pwd`-> Mostra todo o caminho da pasta em que você está.
 
 🌐`dir`-> Lista os diretórios na sua pasta para Windows.
+
 🌐`echo %cd%` -> Mostra todo o caminho da pasta em que você está.
 
 ## Principais Comandos Apenas para o Git
