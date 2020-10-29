@@ -1,5 +1,7 @@
 # Git e GitHub
 
+<img src=https://i.imgur.com/e7XOrIC.gif alt="Ilustração. Notebook numa mesa visto de cima e duas mãos digitando. Uma planta no lado esquerdo do notebook e um bloco de notas no lado direito." width="350" height="350">
+
 # Sumário
 1. [O que é o GIT](#O-que-é-o-GIT)
 
