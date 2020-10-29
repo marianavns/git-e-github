@@ -49,7 +49,7 @@ Nos exemplos, o editor de código será o VSCode.
 
 O Git possui um terminal, assim como o prompt de comando do Windows: o **Git Bash**.
 
-<img src=https://i.imgur.com/gWu39F2.png alt="Ilustração. Pessoa programadora sentada no chão usando seu Notebook. Ao lado da cabeça dela, um fluxograma com círculos, representando o versionamento de código." width="350" height="350">  
+<img src=https://i.imgur.com/gWu39F2.png alt="Ilustração. Pessoa programadora sentada no chão usando seu Notebook. Ao lado da cabeça dela, um fluxograma com círculos, representando o versionamento de código." width="450" height="320">  
 
 # O que é o GITHUB
 
