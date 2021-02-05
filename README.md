@@ -4,12 +4,11 @@
 
 # Sumário
 1. [O que é o GIT](#O-que-é-o-GIT)
-
 2. [O que é o GITHUB](#O-que-é-o-GITHUB)
-
 3. [Como Git e Github funcionam juntos](#Como-Git-e-Github-funcionam-juntos)
-
 4. [Mão na Massa](#Mão-na-Massa)
+
+4.0 [Mão na Massa Express](#Mão-na-Massa-Express)
 
 4.1 [Criando a primeira pasta e o primeiro arquivo](#Criando-a-primeira-pasta-e-o-primeiro-arquivo)
 
@@ -65,7 +64,31 @@ Aqui é só o começo. A parceria Git e Github é muito mais que isso!
 3. Em seguida, a usuária digita alguns comandos e, com eles, envia o código alterado e atualizado para o Github.
 4. Pronto! Agora o código está disponível no Github.
 
-# Mão na Massa
+## Mão na Massa
+
+### Mão na Massa Express
+
+- **Meu projeto já está pronto no meu computador e quero jogá-lo no GitHub:**
+  1. Vá na sua conta no GitHub e crie um novo repositório, clicando em New;
+  2. Selecione a opção `Add a README file`. *Não é obrigatório, mas é uma boa prática sempre!*;
+  3. Clique em "Code" na próxima página e copie o link que será gerado em https. Algo como `https://github.com/seuuser/repositorio.git`. Guarde isso;
+  4. Agora vá para seus arquivos no computador e abra a pasta do seu projeto;
+  5. Abra um terminal dentro desta pasta (dê clique inverso na pasta e selecione "git bash here");
+  6. Digite `git init` para sinalizar que aquela pasta deve entrar no radar do GIT;
+  7. _**Se** apareceu `(master)`, digite `git checkout -b main `para trocar o nome da branch principal de master para main;_
+  8. Digite `git remote add origin o-endereço-que-voce-copiou-do-github` para mostrar ao Git o endereço para guardar os arquivos na internet;
+  9. Digite git remote -v só para conferir se funcionou. Deve aparecer o endereço do repositório duplicado;
+  10. Digite `git pull origin main`para puxar o README.md do site para sua máquina - lembre-se que seu repositório na internet já tem um arquivo que não está no seu pc, o README.md. Ele PRECISA estar na sua máquina também.
+  11. Agora `git add . `para adicionar todos os arquivos da pasta para o pacote a ser upado no Github;
+  12. Digite `git commit -m "Alguma mensagem significativa"`. Assim, você "fecha o pacote e ainda coloca um aviso nele".
+  13. Para finalizar, `git push origin main` para jogar tudo no GitHub! Confira o nome da sua branch antes de fazer este comando!
+
+- **Estou num computador novo e quero copiar um repositório meu (já pronto) do Github para trabalhar nele**
+- **Quero colaborar no projeto de outro usuário (conceito de branch)**
+
+Mais tarde, um outro arquivo importantíssimo também precisará ser adicionado, o `.gitignore`. Ele vai proteger tudo o que está na sua pasta mas que você não quer que vá para a internet. Guarda isso aí.
+
+
 
 ## Criando a primeira pasta e o primeiro arquivo
 
