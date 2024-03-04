@@ -1,6 +1,1 @@
-main
-main
-feat B
-feat B
-feat A
-feat A
+main main
