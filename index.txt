@@ -1,14 +1,3 @@
 main
 main
-A
-A
-B
-B
-B
-B
-B
-C
-C
-D ****
-pull
-MAIS UM
+main
