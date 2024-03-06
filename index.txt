@@ -1,2 +1,4 @@
 mainA
+feature 2
 mainB
+main C
