@@ -6,6 +6,10 @@ function soma (primeiroNumero, segundoNumero){
     return primeiroNumero + segundoNumero
 }
 
+function subtracao (primeiroNumero, segundoNumero){
+    return primeiroNumero - segundoNumero
+}
+
 function multiplicacao (primeiroNumero, segundoNumero){
     return primeiroNumero * segundoNumero
 }
