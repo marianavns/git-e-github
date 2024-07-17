@@ -6,10 +6,6 @@ function soma (primeiroNumero, segundoNumero){
     return primeiroNumero + segundoNumero
 }
 
-function subtracao (primeiroNumero, segundoNumero){
-    return primeiroNumero - segundoNumero
-}
-
 function multiplicacao (primeiroNumero, segundoNumero){
     return primeiroNumero * segundoNumero
 }
@@ -20,5 +16,5 @@ function divisao (primeiroNumero, segundoNumero){
 
 console.log(soma(10,2))
 console.log(subtracao(10,5))
-console.log(divisao(10,2))
 console.log(multiplicacao(10,2))
+console.log(divisao(10,2))
